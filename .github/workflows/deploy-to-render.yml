@@ -37,7 +37,7 @@ jobs:
           
           echo "response_code=$response" >> $GITHUB_OUTPUT
           
-          if [ "$response" -eq 200 ] || [ "$response" -eq 201 ]; then
+          if [ "$response" -eq 200 ] || [ "$response" -eq 201 ] || [ "$response" -eq 202 ]; then
             echo "✅ Deploy triggered successfully."
           else
             echo "❌ Failed to trigger deploy. HTTP status code: $response"
