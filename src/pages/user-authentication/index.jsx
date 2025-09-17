@@ -96,3 +96,10 @@ const UserAuthPage = () => {
 };
 
 export default UserAuthPage;
+// Temporary test to check backend connection
+React.useEffect(() => {
+  fetch(`${import.meta.env.VITE_BACKEND_URL}/db-health`)
+    .then(res => res.json())
+    .then(data => console.log("✅ Backend connected:", data))
+    .catch(err => console.error("❌ Backend connection failed:", err));
+}, []);
